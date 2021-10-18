@@ -34,3 +34,10 @@ go get -u github.com/golang/protobuf/protoc-gen-go
 ```
 protoc --go_out=plugins=grpc:. ./proto/*.proto
 ```
+
+
+# install grpcurl
+```
+go get github.com/fullstorydev/grpcurl
+go install github.com/fullstorydev/grpcurl/cmd/grpcurl
+```
