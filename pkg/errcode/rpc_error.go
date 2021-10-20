@@ -1,3 +1,11 @@
+package errcode
+
+import (
+	pb "github.com/tag-service/proto"
+	codes "google.golang.org/grpc/codes"
+	status "google.golang.org/grpc/status"
+)
+
 func TogRPCError(err *Error) error {
 	s, _ := status.New(ToRPCCode(err.Code()), err.Msg()).WithDetails(&pb.Error{Code: int32(err.Code()), Message: err.Msg()})
 	return s.Err()

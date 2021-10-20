@@ -41,6 +41,10 @@ go get -u github.com/golang/protobuf/protoc-gen-go
 protoc --go_out=plugins=grpc:. ./proto/*.proto
 ```
 
+# build project
+```
+go build ./cmd/main.go
+```
 
 # grpcurl
 
@@ -52,4 +56,7 @@ go install github.com/fullstorydev/grpcurl/cmd/grpcurl
 # using
 ```
 grpcurl -plaintext localhost:18080 list
+```
+```
+grpcurl -plaintext localhost:18080 proto.TagService.GetTagList
 ```
