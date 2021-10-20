@@ -1,3 +1,9 @@
+# Reference
+
+https://github.com/eddycjy
+https://golang2.eddycjy.com/posts/ch3/04-start-grpc/
+
+
 # install protobuf compiler
 
 
@@ -36,8 +42,14 @@ protoc --go_out=plugins=grpc:. ./proto/*.proto
 ```
 
 
-# install grpcurl
+# grpcurl
+
+## install
 ```
 go get github.com/fullstorydev/grpcurl
 go install github.com/fullstorydev/grpcurl/cmd/grpcurl
+```
+# using
+```
+grpcurl -plaintext localhost:18080 list
 ```

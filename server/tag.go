@@ -1,9 +1,15 @@
+package server
+
 import (
-	pb "github.co/tag-service/proto"
-	...
+	"context"
+	"encoding/json"
+
+	bapi "github.com/tag-service/pkg/bapi"
+	"github.com/tag-service/pkg/errcode"
+	pb "github.com/tag-service/proto"
 )
 
-type TagServer struct {}
+type TagServer struct{}
 
 func NewTagServer() *TagServer {
 	return &TagServer{}
